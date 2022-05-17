@@ -1,0 +1,23 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Nombre</td>
+            <td>Apellido</td>
+            <td>Mail</td>
+            <td>Acciones</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of users">
+            <td>{{u.id}}</td>
+            <td>{{u.nombre}}</td>
+            <td>{{u.apellido}}</td>
+            <td>{{u.mail}}</td>
+            <td>
+                <button type="button" class="btn btn-warning" (click)="editarUser(u.id)">Editar</button>
+                <button type="button" class="btn btn-danger ms-2" (click)="eliminarUser(u.id)">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

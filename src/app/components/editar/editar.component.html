@@ -1,0 +1,38 @@
+<div class="card mt-3">
+    <div class="card-header text-center">Registro de personas</div>
+    <div class="card-body">
+        <form (ngSubmit)="editar()">
+            <div class="form-group">
+                <label>Nombre:</label>
+                <input
+                type="text"
+                class="form-control"
+                id="nombre"
+                [(ngModel)]="user.nombre"
+                name="nombre"
+                >
+            </div>
+            <div class="form-group">
+                <label>Apellido:</label>
+                <input
+                type="text"
+                class="form-control"
+                id="apellido"
+                [(ngModel)]="user.apellido"
+                name="apellido"
+                >
+            </div>
+            <div class="form-group">
+                <label>Mail:</label>
+                <input
+                type="text"
+                class="form-control"
+                id="Mail"
+                [(ngModel)]="user.mail"
+                name="mail"
+                >
+            </div>
+            <button class="btn btn-success mt-3">Registrar</button>
+        </form>
+    </div>
+</div>
